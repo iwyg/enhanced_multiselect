@@ -25,23 +25,23 @@ cLass extension_enhanced_multiselect extends Extension
                 'callback' => '__appendAssets'
             )
         );
-	}
+    }
 
-	/**
-	 * __appendAssets()
-	 *
-	 * append css and js assets for multiselectbox control
-	 *
-	 * @access public
-	 * @return void
-	 */
-	public function __appendAssets()
-	{
-		$callback = Symphony::Engine()->getPageCallBack();
+    /**
+     * __appendAssets()
+     *
+     * append css and js assets for multiselectbox control
+     *
+     * @access public
+     * @return void
+     */
+    public function __appendAssets()
+    {
+        $callback = Symphony::Engine()->getPageCallBack();
         if (($callback['driver'] == 'publish' && $callback['context']['page'] != 'index') || $callback['driver'] == 'blueprintssections') {
-			Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/enhanced_multiselect/assets/symphony.multiselect.css', 'screen', 100, false);
-			Administration::instance()->Page->addScriptToHead(URL . '/extensions/enhanced_multiselect/assets/symphony.multiselect.js', 112, false);
-			Administration::instance()->Page->addScriptToHead(URL . '/extensions/enhanced_multiselect/assets/multiselect.init.js', 113, false);
-		}
-	}
+            Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/enhanced_multiselect/assets/symphony.multiselect.css', 'screen', 100, false);
+            Administration::instance()->Page->addScriptToHead(URL . '/extensions/enhanced_multiselect/assets/symphony.multiselect.js', 112, false);
+            Administration::instance()->Page->addScriptToHead(URL . '/extensions/enhanced_multiselect/assets/multiselect.init.js', 113, false);
+        }
+    }
 }
