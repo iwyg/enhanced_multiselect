@@ -9,15 +9,16 @@ vim: set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
  * Displays <a href="http://opensource.org/licenses/gpl-3.0.html">GNU Public License</a>
  * @license http://opensource.org/licenses/gpl-3.0.html GNU Public License
  */
-(function (definition) {
-	var $;
-	if (typeof define === 'function' && define.amd) {
-		$ = require('jquery');
-	} else {
-		$ = this.jQuery;
-	}
-	definition($);
-}(function ($, undefined) {
+//(function (definition) {
+//	var $;
+//	if (typeof define === 'function' && define.amd) {
+//		$ = require('jquery');
+//	} else {
+//		$ = this.jQuery;
+//	}
+//	definition($);
+//}(function ($, undefined) {
+(function ($, undefined) {
 
 	var Symphony = this.Symphony;
 
@@ -278,4 +279,4 @@ vim: set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 		fade: 250,
 		buttonText: 'select option'
 	};
-}));
+}());
