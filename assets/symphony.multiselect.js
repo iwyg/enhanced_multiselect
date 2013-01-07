@@ -279,4 +279,4 @@ vim: set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 		fade: 250,
 		buttonText: 'select option'
 	};
-}());
+}(this.jQuery));
